@@ -1,0 +1,23 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+pageTitle:
+  US: "Configure - Apple Store (U.S.)"
+defaultLocale: "US"
+elements:
+
+  valueMaterializerSummaryLink:
+    locators:
+      US: "//*[@class='value materializer']"
+      CN: "//*[@class='value materializer']"
+  addToCartButton:
+    locators:
+      US: "//span/button[contains(@class,'transactional button')]"
+      CN: "//span/button[contains(@class,'transactional button')]"
+
+  hardwareFirstItemSecondRadioButton:
+    locators:
+      US: "//dd[@id='hardware-content']/div/div[1]//li[2]/input"
+      CN: "//dd[@id='hardware-content']/div/div[1]//li[2]/input"
+  accessoriesFirstItemSecondRadioButton:
+    locators:  
+      US: "//dd[@id='accessories-content']/div/div[1]//li[2]/input"
+      CN: "//dd[@id='accessories-content']/div/div[1]//li[2]/input"

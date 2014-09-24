@@ -1,0 +1,22 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+pageTitle:
+  US: "imac - Apple Store (U.S.)"
+  CN: "imac - Apple Store（中国）"
+defaultLocale: "US"
+elements:
+  buttonRectSecondarySmallFiltersButton:
+    locators:
+      US: "//ul[@class='tools-toggle']/li/button"
+      CN: "//ul[@class='tools-toggle']/li/button"
+      
+  resultHeaderBoxSlateUnveilContainer:
+    locators:
+      US: "//div[@role='main']/div[@class='results-header box slate unveil']"  
+      CN: "//div[@role='main']/div[@class='results-header box slate unveil']"
+  priceHighToLowFilterLink:
+    locators:
+      US: "//input[@id='sort-pricehl']/..//span[@class='filter-content']"
+      CN: "//input[@id='sort-pricehl']/..//span[@class='filter-content']"
+
+      
+    
