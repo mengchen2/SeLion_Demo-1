@@ -19,8 +19,8 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>central</id>
-			<name>Example Plugin Repository</name>
-			<url>http://example.plugin.repo/public-all/</url>
+			<name>Symbio</name>
+			<url>http://54.68.226.183/nexus/content/groups/public/</url>
 			<layout>default</layout>
 			<snapshots>
 				<!-- Flipping this to true would let you work with SNAPSHOT versions 
@@ -33,23 +33,31 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+	<repositories>
+		<repository>
+			<id>com.symbio</id>
+			<url>http://54.68.226.183/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+
+
 	<build>
 
 
 		<plugins>
-		<plugin>
-  <groupId>com.paypal.selion</groupId>
-  <artifactId>SeLion-Code-Generator</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <executions>
-    <execution>
-      <phase>generate-sources</phase>
-      <goals>
-        <goal>generate</goal>
-      </goals>
-    </execution>
-  </executions>
-</plugin>
+			<plugin>
+				<groupId>com.paypal.selion</groupId>
+				<artifactId>SeLion-Code-Generator</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -58,31 +66,6 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.eclipse.m2e</groupId>
-				<artifactId>lifecycle-mapping</artifactId>
-				<configuration>
-					<lifecycleMappingMetadata>
-						<pluginExecutions>
-							<pluginExecution>
-								<pluginExecutionFilter>
-									<groupId>com.paypal.selion</groupId>
-									<artifactId>SeLion-Code-Generator</artifactId>
-									<versionRange>[1.0.0-SNAPSHOT,)</versionRange>
-									<goals>
-										<goal>generate</goal>
-									</goals>
-								</pluginExecutionFilter>
-								<action>
-									<execute>
-										<runOnIncremental>false</runOnIncremental>
-									</execute>
-								</action>
-							</pluginExecution>
-						</pluginExecutions>
-					</lifecycleMappingMetadata>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -105,39 +88,39 @@
 				</executions>
 			</plugin>
 		</plugins>
-	 <pluginManagement>
+		<pluginManagement>
 			<plugins>
-    <!--This plugin's configuration is used to store Eclipse m2e settings only.
-      It has no influence on the Maven build itself. -->
-    <plugin>
-      <groupId>org.eclipse.m2e</groupId>
-      <artifactId>lifecycle-mapping</artifactId>
-      <version>1.0.0</version>
-      <configuration>
-        <lifecycleMappingMetadata>
-          <pluginExecutions>
-            <pluginExecution>
-              <pluginExecutionFilter>
-                <groupId>com.paypal.selion</groupId>
-                <artifactId>SeLion-Code-Generator</artifactId>
-                <versionRange>
-                [1.1.0-SNAPSHOT,)                
-                </versionRange>
-                <goals>
-                  <goal>generate</goal>
-                </goals>
-              </pluginExecutionFilter>
-              <action>
-                <execute>
-                  <runOnIncremental>false</runOnIncremental>
-                </execute>
-              </action>
-            </pluginExecution>
-          </pluginExecutions>
-        </lifecycleMappingMetadata>
-      </configuration>
-    </plugin>
-  </plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.paypal.selion</groupId>
+										<artifactId>SeLion-Code-Generator</artifactId>
+										<versionRange>
+											[1.0.0-SNAPSHOT,)
+										</versionRange>
+										<goals>
+											<goal>generate</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>false</runOnIncremental>
+										</execute>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
 		</pluginManagement>
 	</build>
 </project>

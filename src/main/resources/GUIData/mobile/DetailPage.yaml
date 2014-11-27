@@ -1,0 +1,7 @@
+baseClass: "com.paypal.selion.testcomponents.mobile.BasePage"
+defaultLocale: "US"
+elements:
+  textUIAStaticText:
+    locators:
+      US: "//UIAWindow/UIAStaticText"
+platform: "ios"
