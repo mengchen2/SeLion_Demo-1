@@ -28,10 +28,11 @@ public class SeLion_Demo {
 	
 	@DataProvider(name = "yamlDataProvider")
 	public Object[][] simpleDataProvider() throws Exception {
-	  String[][] data = new String[2][1];
+	  String[][] data = new String[3][1];
 	  
 	  data[0][0] = "CN";
 	  data[1][0] = "US";
+	  data[2][0] = "NL";
 	  
 	  return data;
 	}
