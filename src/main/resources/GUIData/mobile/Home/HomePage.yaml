@@ -1,0 +1,15 @@
+baseClass: "com.paypal.selion.testcomponents.BasicPageImpl"
+defaultLocale: "US"
+platform: "mobile"
+elements:
+  sliderImage:
+    android:
+      US: "daimajia_slider_image"
+  gridIconLabel:
+    android:
+      US: "grid_icon"  
+pageTitle:
+  US: "page_object"
+pageValidators: [
+  sliderImage
+]  

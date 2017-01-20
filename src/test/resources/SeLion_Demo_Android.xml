@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="Selion Test"
+       skipfailedinvocationcounts="false" junit="false" parallel="classes"
+       data-provider-thread-count="1" annotations="JDK">
+
+  <!-- optional (defaults to firefox). Firefox browser will be used for
+    web test -->
+  <!-- <parameter name="browser" value="*firefox"/>  -->
+    <parameter name="mobileNodeType" value="appium" />
+    <parameter name="seleniumhost" value="127.0.0.1" />   
+    <parameter name="seleniumport" value="4723" />
+    <parameter name="mobileAppLanguage" value="en"/>
+    <parameter name="mobilePlatform" value="ANDROID"/>
+    <parameter name="appPath" value="/Users/jerrchen/workspace/SeLion-Mobile1/SeLion_Demo-1/Applications/claro-lqa-v25-2.apk"/>
+    <parameter name="mobileDevice" value="android:5.1"/>
+    <parameter name="mobileDeviceType" value="Android Emulator"/>
+ 
+  <test name="SeLion_Demo">
+    <classes>
+      <class name="com.symbio.test.AndroidDemo"></class>
+    </classes>
+  </test>
+</suite>
